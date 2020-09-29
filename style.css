@@ -7,3 +7,13 @@ circle:hover
   {
     fill:rgb(32, 32, 105);
   }
+
+.city-count{
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+rect:hover
+  {
+    fill:rgb(32, 32, 105);
+  }

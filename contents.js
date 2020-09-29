@@ -27,8 +27,17 @@ d3.csv("cities.csv", d3.autoType).then((data) => {
             return 4;
           }
         })
-        .attr("fill", "MediumPurple");
-  
+        .attr("fill", "MediumPurple")
+        .on("click", (event, d) => {document.querySelector(".city-name").src = d.city; //this goes into the library 
+      //csv and pulls the image then gives in the 
+         d3.select(".city-name").text(d.city);
+         d3.select(".country-name").text(d.country);
+         d3.select(".city-population").text(d.population);
+
+        });
+        
+
+
      svg
         .selectAll("text")
         .data(data)
