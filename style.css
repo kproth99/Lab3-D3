@@ -1,0 +1,9 @@
+body {
+    font-family: 'Staatliches', cursive;
+    color: rgb(61, 64, 207);
+}
+
+circle:hover
+  {
+    fill:rgb(32, 32, 105);
+  }
