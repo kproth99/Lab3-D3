@@ -1,7 +1,6 @@
 d3.csv("cities.csv", d3.autoType).then((data) => {
     console.log("cities", data);
     data = data.filter((d) => d.eu === true);
-
     console.log("cities", data);
     d3.select(".city-count").text(data.length);
     const width = 700;
