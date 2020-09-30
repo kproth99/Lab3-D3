@@ -1,4 +1,3 @@
-
 d3.csv("cities.csv", d3.autoType).then((data) => {
     console.log("cities", data);
     data = data.filter((d) => d.eu === true);
@@ -23,21 +22,15 @@ d3.csv("cities.csv", d3.autoType).then((data) => {
           if(d.population > 1000000){
             return 8;
           }
-          else{
-            return 4;
-          }
+          else{ return 4;}
         })
         .attr("fill", "MediumPurple")
-        .on("click", (event, d) => {document.querySelector(".city-name").src = d.city; //this goes into the library 
-      //csv and pulls the image then gives in the 
+        .on("click", (event, d) => {document.querySelector(".city-name").src = d.city; 
          d3.select(".city-name").text(d.city);
          d3.select(".country-name").text(d.country);
          d3.select(".city-population").text(d.population);
-
         });
         
-
-
      svg
         .selectAll("text")
         .data(data)
@@ -82,7 +75,7 @@ d3.csv("cities.csv", d3.autoType).then((data) => {
       .attr("fill", "MediumSlateBlue")
   
       .on("click", (event, d) => {document.querySelector(".image").src = "img/" + d.image; //this goes into the library 
-      //csv and pulls the image then gives in the 
+      //csv and pulls the image 
         d3.select(".buildingname").text(d.building);
         d3.select(".height").text(d.height_ft);
         d3.select(".city").text(d.city);
